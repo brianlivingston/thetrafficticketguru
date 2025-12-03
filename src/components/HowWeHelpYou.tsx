@@ -128,7 +128,7 @@ export default function HowWeHelpYou() {
               }}
               className="flex flex-col gap-3 sm:flex-row sm:items-center"
             >
-              <motion.a
+              {/* <motion.a
                 href="https://thetrafficticket.guru/buy-now"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -147,7 +147,7 @@ export default function HowWeHelpYou() {
                 className="inline-flex items-center justify-center rounded-[14px] bg-[#E10B0A] h-[48px] sm:h-[52px] px-6 sm:px-8 text-base sm:text-base font-semibold text-white shadow-[0_4px_14px_rgba(225,11,10,0.25)] hover:bg-[#c00a09] hover:shadow-[0_6px_20px_rgba(225,11,10,0.3)] transition-all duration-200 whitespace-nowrap"
               >
                 Book Your $97 Review
-              </motion.a>
+              </motion.a> */}
               <motion.a
                 href="/evidence-review"
                 target="_blank"
