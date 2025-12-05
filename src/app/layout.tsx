@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import ExitIntentPopup from '@/components/ExitIntentPopup'
 
 export const metadata: Metadata = {
   title: 'Beyond Ticket Defence - We Deliver Peace of Mind',
@@ -18,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <ExitIntentPopup />
+      </body>
     </html>
   )
 }

@@ -12,9 +12,9 @@ export default function HowWeHelpYou() {
     'Protect yourself from points, fines, and insurance increases',
   ]
 
-  const sectionRef = useRef(null)
-  const imageRef = useRef(null)
-  const contentRef = useRef(null)
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const imageRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
   const isSectionInView = useInView(sectionRef, { once: true, margin: '-100px', amount: 0.3 })
   const isImageInView = isSectionInView
   const isContentInView = isSectionInView
@@ -78,7 +78,7 @@ export default function HowWeHelpYou() {
               transition={{ duration: 0.45, delay: 0.08, ease: [0.22, 0.61, 0.36, 1] }}
               className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-medium text-[#0F172A] mb-3 sm:mb-4 px-2"
             >
-              Get Your <span className="text-primary">$97</span> Disclosure Review!
+              Get Your <span className="text-[#E10B0A]">$97</span> Disclosure Review!
             </motion.h2>
             
             {/* Paragraph */}
@@ -128,8 +128,8 @@ export default function HowWeHelpYou() {
               }}
               className="flex flex-col gap-3 sm:flex-row sm:items-center"
             >
-              {/* <motion.a
-                href="https://thetrafficticket.guru/buy-now"
+              {<motion.a
+                href="https://checkout.thetrafficticket.guru/buy-now"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0.96 }}
@@ -147,7 +147,7 @@ export default function HowWeHelpYou() {
                 className="inline-flex items-center justify-center rounded-[14px] bg-[#E10B0A] h-[48px] sm:h-[52px] px-6 sm:px-8 text-base sm:text-base font-semibold text-white shadow-[0_4px_14px_rgba(225,11,10,0.25)] hover:bg-[#c00a09] hover:shadow-[0_6px_20px_rgba(225,11,10,0.3)] transition-all duration-200 whitespace-nowrap"
               >
                 Book Your $97 Review
-              </motion.a> */}
+              </motion.a> }
               <motion.a
                 href="/evidence-review"
                 target="_blank"

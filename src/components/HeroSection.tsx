@@ -48,7 +48,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[20px] sm:text-[16px] font-regular text-[#0F172A] max-w-[640px] mx-auto mb-6 sm:mb-8 lg:mb-10 px-4 font-sans"
+            className="text-[16px] sm:text-[18px] lg:text-[20px] font-regular text-[#0F172A] max-w-[640px] mx-auto mb-6 sm:mb-8 lg:mb-10 px-4 font-sans"
           >
             Want To Keep Your Insurance Rates Low?
           </motion.h2>

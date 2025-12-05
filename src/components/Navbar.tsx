@@ -58,9 +58,9 @@ export default function Navbar({ variant = 'internal', heroRef }: NavbarProps) {
       }`}
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-20">
-        <div className="flex items-center justify-between h-[56px] lg:h-[60px]">
+        <div className="flex items-center justify-between h-[56px] lg:h-[60px] min-w-0">
           {/* Logo and Menu Links - Left Aligned */}
-          <div className="flex items-center gap-3 sm:gap-4 lg:gap-[28px]">
+          <div className="flex items-center gap-3 sm:gap-4 lg:gap-[28px] min-w-0 flex-1">
             {/* Logo */}
             <a href="/" className="flex-shrink-0">
               <Image
@@ -73,32 +73,34 @@ export default function Navbar({ variant = 'internal', heroRef }: NavbarProps) {
               />
             </a>
             
-            {/* Navigation Links - Desktop */}
-            <div className="hidden lg:flex flex-nowrap gap-12 whitespace-nowrap">
-              <a href="/" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap">Home</a>
-              <a href="/#irs" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap">Roadside Suspension</a>
-              <a href="/#disclosure-review" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap">Evidence Review</a>
-              <a href="/#about" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap">About Us</a>
-              <a href="/#about" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap">Our Guarantee</a>
-              <a href="/#contact" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap">Contact</a>
+            {/* Navigation Links - Desktop Only (hidden below xl to prevent overlap) */}
+            <div className="hidden xl:flex flex-nowrap gap-6 2xl:gap-10 whitespace-nowrap flex-shrink-0 overflow-hidden">
+              <a href="/" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Home</a>
+              <a href="/#irs" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Roadside Suspension</a>
+              <a href="/#disclosure-review" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Evidence Review</a>
+              <a href="/#about" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">About Us</a>
+              <a href="/#about" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Our Guarantee</a>
+              <a href="/#contact" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Contact</a>
             </div>
           </div>
           
           {/* CTA Button and Mobile Menu - Right */}
-          <div className="flex items-center gap-3">
-            {/* CTA Button - Hidden on mobile, shown on tablet+ */}
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+            {/* CTA Button - Responsive sizing to prevent overlap */}
             <a 
               href="tel:+17803805511"
-              className="hidden sm:inline-flex items-center justify-center rounded-[14px] bg-[#E10B0A] h-[40px] sm:h-[42px] lg:h-[44px] px-4 lg:px-6 text-xs lg:text-base font-semibold text-white hover:bg-[#c00a09] transition-all duration-200 whitespace-nowrap"
+              className="hidden sm:inline-flex items-center justify-center rounded-[14px] bg-[#E10B0A] h-[40px] sm:h-[42px] lg:h-[44px] text-xs sm:text-xs lg:text-sm xl:text-base font-semibold text-white hover:bg-[#c00a09] transition-all duration-200 whitespace-nowrap flex-shrink-0"
+              style={{ paddingLeft: '24px', paddingRight: '24px' }}
             >
-              <span className="hidden lg:inline">Call for a Free Consultation</span>
-              <span className="lg:hidden">Call Us</span>
+              <span className="hidden xl:inline">Call for a Free Consultation</span>
+              <span className="hidden lg:inline xl:hidden">Call Us</span>
+              <span className="hidden sm:inline lg:hidden">Call US</span>
             </a>
             
-            {/* Mobile Menu Button */}
+            {/* Mobile/Tablet Menu Button - Hidden on xl+ when menu links are visible */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-[#0F172A] hover:bg-gray-100 transition-colors"
+              className="xl:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-[#0F172A] hover:bg-gray-100 transition-colors flex-shrink-0"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
