@@ -30,17 +30,17 @@ export default function HeroSection() {
       <Navbar variant="hero" heroRef={heroRef} />
 
       {/* Hero Content */}
-      <div className="relative z-10 flex-1 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-6 pt-[100px] sm:pt-[120px] pb-12 sm:pb-16 lg:pt-[140px] lg:pb-20">
+      <div className="relative z-10 flex-1 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-6 pt-[100px] sm:pt-[120px] pb-12 sm:pb-16 lg:pt-[120px] lg:pb-20">
         <div className="relative z-10 max-w-full mx-auto text-center">
           {/* Main Headline */}
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[40px] sm:text-[36px] md:text-[48px] lg:text-[64px] font-semibold leading-[1.1] mb-3 sm:mb-4 px-2 font-sans"
+            className="text-[40px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-semibold leading-[1.1] mb-3 sm:mb-4 px-2 font-sans text-center"
           >
-            <span className="text-[#0F172A]">Got Caught? </span>
-            <span className="text-[#E10B0A]">Need Your License?</span>
+            <span className="text-[#0F172A]">A traffic ticket is NOT </span>
+            <span className="text-[#E10B0A]">Just a Ticket</span>
           </motion.h1>
           
           {/* Subheading */}
@@ -48,9 +48,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[16px] sm:text-[18px] lg:text-[20px] font-regular text-[#0F172A] max-w-[640px] mx-auto mb-6 sm:mb-8 lg:mb-10 px-4 font-sans"
+            className="text-[16px] sm:text-[18px] lg:text-[24px] font-regular text-[#0F172A] max-w-[800px] mx-auto mb-6 sm:mb-8 lg:mb-10 px-4 font-sans text-center"
           >
-            Want To Keep Your Insurance Rates Low?
+            It&apos;s a fast track to insurance spikes, demerit points, license suspension, or even job loss - all from one stop.
           </motion.h2>
           
           {/* Stat Line */}
@@ -58,9 +58,9 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[16px] text-[#475569] max-w-[900px] mx-auto mb-6 sm:mb-8 px-4 font-sans font-light leading-relaxed"
+            className="text-[18px] text-[#475569] max-w-[900px] mx-auto mb-6 sm:mb-8 px-4 font-sans font-light leading-relaxed text-center"
           >
-            Over <strong className="font-bold text-[#111827]">$10 million</strong> saved in insurance costs and <strong className="font-bold text-[#111827]">2,500+ licenses</strong> protected across Alberta. Your case isn't just another file it's our reputation on the line.
+            Don&apos;t gamble your future. <strong className="font-bold text-[#111827]">Call the team that fixes this BEFORE it blows up your life</strong>
           </motion.p>
 
           {/* CTA Buttons */}

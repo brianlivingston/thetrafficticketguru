@@ -48,16 +48,20 @@ export default function Navbar({ variant = 'internal', heroRef }: NavbarProps) {
   const isFixed = variant === 'hero' && isPastHero
   const isAbsolute = variant === 'hero' && !isPastHero
   const isRelative = variant === 'internal'
+  // Show border only when scrolled past hero (for hero variant) or always for internal pages
+  const showBorder = variant === 'internal' || (variant === 'hero' && isPastHero)
 
   return (
     <motion.nav
       layout
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-      className={`z-50 py-2 lg:py-3 bg-[#FFFFFF] border-b border-neutral-200 ${
+      className={`z-50 py-2 lg:py-3 bg-[#FFFFFF] ${
+        showBorder ? 'border-b border-neutral-200' : ''
+      } ${
         isFixed ? 'fixed top-0 left-0 right-0' : isAbsolute ? 'absolute top-0 left-0 right-0' : 'relative'
       }`}
     >
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-20">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-[60px]">
         <div className="flex items-center justify-between h-[56px] lg:h-[60px] min-w-0">
           {/* Logo and Menu Links - Left Aligned */}
           <div className="flex items-center gap-3 sm:gap-4 lg:gap-[28px] min-w-0 flex-1">
@@ -74,13 +78,13 @@ export default function Navbar({ variant = 'internal', heroRef }: NavbarProps) {
             </a>
             
             {/* Navigation Links - Desktop Only (hidden below xl to prevent overlap) */}
-            <div className="hidden xl:flex flex-nowrap gap-6 2xl:gap-10 whitespace-nowrap flex-shrink-0 overflow-hidden">
-              <a href="/" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Home</a>
-              <a href="/#irs" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Roadside Suspension</a>
-              <a href="/#disclosure-review" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Evidence Review</a>
-              <a href="/#about" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">About Us</a>
-              <a href="/#about" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Our Guarantee</a>
-              <a href="/#contact" className="text-base text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Contact</a>
+            <div className="hidden xl:flex flex-nowrap gap-10 2xl:gap-12 whitespace-nowrap flex-shrink-0 overflow-hidden ml-8 lg:ml-8">
+              <a href="/" className="text-[14px] text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Home</a>
+              <a href="/#irs" className="text-[14px] text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Roadside Suspension</a>
+              <a href="/#disclosure-review" className="text-[14px] text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Evidence Review</a>
+              <a href="/#about" className="text-[14px] text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">About Us</a>
+              <a href="/#about" className="text-[14px] text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Our Guarantee</a>
+              <a href="/#contact" className="text-[14px] text-[#0F172A] hover:text-[#E10B0A] transition-colors font-normal whitespace-nowrap flex-shrink-0">Contact</a>
             </div>
           </div>
           

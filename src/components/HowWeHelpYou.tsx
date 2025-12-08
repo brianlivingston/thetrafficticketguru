@@ -149,9 +149,7 @@ export default function HowWeHelpYou() {
                 Book Your $97 Review
               </motion.a> }
               <motion.a
-                href="/evidence-review"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/evidence-review?cta=selected"
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={isContentInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.96 }}
                 transition={{ 

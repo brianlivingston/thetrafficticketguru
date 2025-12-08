@@ -69,8 +69,6 @@ export default function IRSSection() {
                 </a>
                 <a
                   href="/on-road-suspension"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-[14px] border border-[#CBD5E1] h-[48px] sm:h-[52px] px-6 sm:px-8 text-base sm:text-base font-semibold text-[#0F172A] shadow-sm hover:shadow-md transition-all duration-200 whitespace-nowrap bg-white"
                 >
                   More About IRS

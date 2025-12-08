@@ -3,11 +3,16 @@
 import Image from 'next/image'
 import Script from 'next/script'
 import { motion } from 'framer-motion'
+import { useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FAQSection from '@/components/FAQSection'
 
-export default function EvidenceReviewPage() {
+function EvidenceReviewContent() {
+  const searchParams = useSearchParams()
+  const isCTASelected = searchParams.get('cta') === 'selected'
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation Bar */}
@@ -294,12 +299,16 @@ Claim your Traffic Ticket Disclosure Review today by filling out the form below.
             transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
           >
             <a
-              href="https://thetrafficticket.guru/buy-now"
+              href="https://checkout.thetrafficticket.guru/buy-now"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-[14px] bg-[#E10B0A] h-[48px] sm:h-[52px] px-6 sm:px-8 text-base sm:text-base font-semibold text-white shadow-[0_4px_14px_rgba(225,11,10,0.25)] hover:bg-[#c00a09] hover:shadow-[0_6px_20px_rgba(225,11,10,0.3)] transition-all duration-200 whitespace-nowrap"
+              className={`inline-flex items-center justify-center rounded-[14px] h-[48px] sm:h-[52px] px-6 sm:px-8 text-base sm:text-base font-semibold transition-all duration-200 whitespace-nowrap ${
+                isCTASelected
+                  ? 'bg-[#E10B0A] text-white shadow-[0_6px_24px_rgba(225,11,10,0.5)] ring-4 ring-[#E10B0A]/30 scale-105'
+                  : 'bg-[#E10B0A] text-white shadow-[0_4px_14px_rgba(225,11,10,0.25)] hover:bg-[#c00a09] hover:shadow-[0_6px_20px_rgba(225,11,10,0.3)]'
+              }`}
             >
-              Book Your Disclosure Review!
+              Book Your $97 Review
             </a>
           </motion.div>
         </div>
@@ -544,6 +553,25 @@ Claim your Traffic Ticket Disclosure Review today by filling out the form below.
 
       <Footer />
     </div>
+  )
+}
+
+export default function EvidenceReviewPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-white">
+        <Navbar variant="internal" />
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#E10B0A] mx-auto mb-4"></div>
+            <p className="text-[#475569]">Loading...</p>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    }>
+      <EvidenceReviewContent />
+    </Suspense>
   )
 }
 
