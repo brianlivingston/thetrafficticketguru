@@ -48,7 +48,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[16px] sm:text-[18px] lg:text-[24px] font-regular text-[#0F172A] max-w-[800px] mx-auto mb-6 sm:mb-8 lg:mb-10 px-4 font-sans text-center"
+            className="text-[16px] sm:text-[18px] lg:text-[24px] font-regular text-[#0F172A] max-w-[860px] mx-auto mb-6 sm:mb-8 lg:mb-10 px-4 font-sans text-center"
           >
             It&apos;s a fast track to insurance spikes, demerit points, license suspension, or even job loss - all from one stop.
           </motion.h2>
@@ -60,7 +60,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-[18px] text-[#475569] max-w-[900px] mx-auto mb-6 sm:mb-8 px-4 font-sans font-light leading-relaxed text-center"
           >
-            Don&apos;t gamble your future. <strong className="font-bold text-[#111827]">Call the team that fixes this BEFORE it blows up your life</strong>
+            Don&apos;t gamble your future. <strong className="font-semibold text-[#111827]">Call the team that fixes this BEFORE it blows up your life</strong>
           </motion.p>
 
           {/* CTA Buttons */}
