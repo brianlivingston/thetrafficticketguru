@@ -7,6 +7,7 @@
    - Go to Application/Storage tab
    - Clear Session Storage
    - Or run in console: `sessionStorage.clear()`
+   - test
 
 ## Test Scenarios
 
