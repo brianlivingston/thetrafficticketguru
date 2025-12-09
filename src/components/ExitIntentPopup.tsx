@@ -229,10 +229,11 @@ export default function ExitIntentPopup() {
           <Image
             src="/images/nav-logo.png"
             alt="Traffic Ticket Guru Logo"
-            width={100}
-            height={33}
+            width={180}
+            height={60}
             className="h-auto w-[100px]"
             priority
+            unoptimized
           />
         </div>
 

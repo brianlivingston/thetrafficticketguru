@@ -39,7 +39,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-[40px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-semibold leading-[1.1] mb-3 sm:mb-4 px-2 font-sans text-center"
           >
-            <span className="text-[#0F172A]">A traffic ticket is NOT </span>
+            <span className="text-[#0F172A]">A Traffic Ticket is NOT </span>
             <span className="text-[#E10B0A]">&quot;Just a Ticket&quot;</span>
           </motion.h1>
           
