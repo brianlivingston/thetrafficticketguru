@@ -13,7 +13,7 @@ export default function FeaturedServicesGrid() {
     },
     {
       title: 'Cell Phone Tickets',
-      description: 'In Alberta, these tickets are 3 demerit points and will increase your insurance rates substantially. Since this law came in to effect 2011, we have handled hundreds of these successfully for our clients - with only person ending up with this on their record.',
+      description: 'In Alberta, these tickets are 3 demerit points and will increase your insurance rates substantially. Since this law came in to effect 2011, we have handled hundreds of these successfully for our clients with only 2 person ending up with this on their record.',
       icon: '/images/services/mobile.svg',
     },
     {

@@ -40,7 +40,7 @@ export default function HeroSection() {
             className="text-[40px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-semibold leading-[1.1] mb-3 sm:mb-4 px-2 font-sans text-center"
           >
             <span className="text-[#0F172A]">A traffic ticket is NOT </span>
-            <span className="text-[#E10B0A]">Just a Ticket</span>
+            <span className="text-[#E10B0A]">&quot;Just a Ticket&quot;</span>
           </motion.h1>
           
           {/* Subheading */}
@@ -60,7 +60,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-[18px] text-[#475569] max-w-[900px] mx-auto mb-6 sm:mb-8 px-4 font-sans font-light leading-relaxed text-center"
           >
-            Don&apos;t gamble your future. <strong className="font-semibold text-[#111827]">Call the team that fixes this BEFORE it blows up your life</strong>
+            Don&apos;t gamble your future. <strong className="font-semibold text-[#111827]">Call the largest team in Western Canada to fix it BEFORE it blows up your life</strong>
           </motion.p>
 
           {/* CTA Buttons */}
