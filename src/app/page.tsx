@@ -28,7 +28,6 @@ export default function Home() {
               var script = document.createElement('script');
               script.src = 'https://app.zweelie.com/zweelie-widget-embed.js';
               script.setAttribute('data-property-id', 'fb782461-663b-42d4-9778-61d2aa6a2483');
-              script.setAttribute('data-placement', 'bottom-right');
               script.setAttribute('data-api-url', 'https://api.zweelie.com/api');
               document.head.appendChild(script);
             })();
