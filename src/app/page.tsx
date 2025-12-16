@@ -19,21 +19,21 @@ const TestimonialsSection = dynamic(() => import('@/components/TestimonialsSecti
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden">
-      <Script
+      {/* <Script
         id="zweelie-widget"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function() {
               var script = document.createElement('script');
-              script.src = 'https://app.zweelie.com/zweelie-widget-embed.js';
-              script.setAttribute('data-property-id', 'fb782461-663b-42d4-9778-61d2aa6a2483');
-              script.setAttribute('data-api-url', 'https://api.zweelie.com/api');
+              script.src = 'https://zweelie.ngrok.app/zweelie-widget-embed.js';
+              script.setAttribute('data-property-id', 'cbb1154c-8594-4082-afe2-3d54c974292e');
+              script.setAttribute('data-api-url', 'https://zweelievoice.ngrok.app/api');
               document.head.appendChild(script);
             })();
           `,
         }}
-      />
+      /> */}
       <HashScrollHandler />
       <HeroSection />
       <TrustBadgesRow />
