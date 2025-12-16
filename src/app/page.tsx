@@ -19,7 +19,7 @@ const TestimonialsSection = dynamic(() => import('@/components/TestimonialsSecti
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden">
-      {/* <Script
+      <Script
         id="zweelie-widget"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -33,7 +33,7 @@ export default function Home() {
             })();
           `,
         }}
-      /> */}
+      />
       <HashScrollHandler />
       <HeroSection />
       <TrustBadgesRow />
