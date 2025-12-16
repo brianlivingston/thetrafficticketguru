@@ -111,6 +111,7 @@ export default function HowWeHelpYou() {
                     width={24}
                     height={24}
                     className="mt-1 flex-shrink-0"
+                    unoptimized
                   />
                   <span className="text-[#475569] text-base sm:text-base md:text-lg font-normal">{point}</span>
                 </motion.li>
@@ -149,7 +150,9 @@ export default function HowWeHelpYou() {
                 Book Your $97 Review
               </motion.a> }
               <motion.a
-                href="/evidence-review?cta=selected"
+                href="/evidence-review"
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={isContentInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.96 }}
                 transition={{ 
