@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import HeroSection from '@/components/HeroSection'
 import TrustBadgesRow from '@/components/TrustBadgesRow'
 import FeaturedServicesGrid from '@/components/FeaturedServicesGrid'
@@ -40,12 +41,13 @@ export default function Home() {
       <FeaturedServicesGrid />
       <IRSSection />
       <HowWeHelpYou />
-      <TestimonialsSection />
+      <Suspense fallback={<div className="h-[460px] bg-[#F7F5F4]" />}>
+        <TestimonialsSection />
+      </Suspense>
       <AboutTheAgency />
       <FAQSection />
       <ContactMapSection />
       <Footer />
-      
     </main>
   )
 }

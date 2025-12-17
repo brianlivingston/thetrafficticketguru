@@ -15,6 +15,7 @@ export default function Footer() {
                 width={64}
                 height={64}
                 className="h-auto w-12 sm:w-14 md:w-16 flex-shrink-0"
+                unoptimized
               />
               <p className="text-white text-base sm:text-[18px] md:text-[20px] lg:text-[22px] font-medium leading-snug">
                 Beyond Ticket Defence –<br />

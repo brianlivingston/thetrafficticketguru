@@ -205,3 +205,4 @@ console.log(`Scrolled: ${scrollPct}%`);
 - **Safari:** Exit intent detection may be less reliable
 - **Mobile browsers:** Use reverse scroll or inactivity timer instead
 
+
