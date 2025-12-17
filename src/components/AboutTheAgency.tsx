@@ -52,6 +52,7 @@ function AdvocateCard({ advocate, index, className = "" }: { advocate: Advocate;
               className="h-full w-full object-contain object-top"
               loading="lazy"
               priority={false}
+              unoptimized
             />
           </div>
         </div>
@@ -87,15 +88,15 @@ function GuaranteeCard({ index, className = "" }: { index: number; className?: s
       <div className="relative">
         <div className="flex flex-col md:flex-row md:items-center md:gap-8 gap-6">
           {/* Left Column: Icon + Title + Paragraph */}
-          <div className="flex-1 flex flex-col justify-center px-6 md:px-8 py-10 md:py-14">
+          <div className="flex-1 flex flex-col justify-center px-3 md:px-8 py-6 md:py-14">
             {/* Header Row: Shield Icon + Title */}
-            <div className="flex items-center gap-[18px] mb-4">
+            <div className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-start gap-5 md:gap-[18px] mb-6 md:mb-4">
               <ShieldCheck className="h-[72px] w-[72px] text-[#E10B0A] flex-shrink-0" strokeWidth={1} />
-              <h3 className="text-[28px] md:text-[40px] font-bold leading-tight text-slate-900">Our Guarantee</h3>
+              <h3 className="text-[28px] md:text-[40px] font-bold leading-tight text-slate-900 text-center md:text-left">Our Guarantee</h3>
             </div>
             
             {/* Large Statement Paragraph - Center Aligned */}
-            <p className="text-[28px] md:text-[28px] leading-[1.3] text-slate-600 font-light max-w-[560px] mx-auto text-left">
+            <p className="text-[22px] md:text-[28px] leading-[1.3] text-slate-600 font-light max-w-md md:max-w-[560px] mx-auto text-center md:text-left">
               We&apos;re the first and only Traffic Ticket Defence Agency confident enough to guarantee our work on every
               ticket we fight.
             </p>

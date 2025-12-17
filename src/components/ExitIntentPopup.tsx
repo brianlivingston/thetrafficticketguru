@@ -226,15 +226,17 @@ export default function ExitIntentPopup() {
         {/* Title and Logo - centered at top */}
         <div className="flex-shrink-0 flex flex-col justify-center items-center pt-2 pb-2 px-6 bg-white border-gray-100">
           <h2 className="text-[32px] font-semibold text-[#0F172A] mb-8">Contact Us</h2>
-          <Image
-            src="/images/nav-logo.png"
-            alt="Traffic Ticket Guru Logo"
-            width={180}
-            height={60}
-            className="h-auto w-[100px]"
-            priority
-            unoptimized
-          />
+          <div className="relative w-[100px] h-auto">
+            <Image
+              src="/images/nav-logo.png"
+              alt="Traffic Ticket Guru Logo"
+              width={180}
+              height={60}
+              className="w-full h-auto object-contain"
+              priority
+              unoptimized
+            />
+          </div>
         </div>
 
         {/* Form iframe container - scrollable */}
