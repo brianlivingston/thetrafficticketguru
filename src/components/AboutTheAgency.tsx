@@ -28,6 +28,13 @@ const advocates = [
       "Tim Dunlap is a Retired RCMP police officer with 27 years experience with 4 years in a full time traffic position on Highway Patrol. He was also a Transit Peace Officer for city of Edmonton for 5 years, and a Provincial Traffic Crown Prosecutor. Tim handles Central Alberta.",
     image: "/images/Tim-dunlap.png",
   },
+  {
+    name: "Dean Marsh",
+    role: "Owner Provincial Tickets Resolutions Corporation",
+    description:
+      "We are proud to announce that Dean Marsh, owner of Provincial Tickets Resolutions Corporation, has joined with us to handle all Southern Alberta and out of province matters. Dean is a seasoned Professional Court Agent with 17 years of experience serving the Courts across Western Canada, including Alberta, Manitoba, Saskatchewan, and is currently a member of the Law Society of British Columbia. He brings a wealth of expertise to his clients. He is certified as a Radar/Lidar Instructor, Traffic Law Instructor, and Collision Investigator. His distinguished background includes service in the Canadian military and experience as a Special Constable, contributing to over 30 years of comprehensive law enforcement knowledge. He is committed to providing clients with honest, ethical, and expert evaluation of evidence. His extensive experience enables him to identify critical legal complexities and deliver outstanding results. As he states, “I used to write them, now I fight them!”",
+    image: "/images/dean-marsh-img.png",
+  },
 ];
 
 type Advocate = (typeof advocates)[number];
@@ -179,10 +186,11 @@ export default function AboutTheAgency() {
           and the real impact on your insurance, your record, and your peace of mind.
         </motion.p>
 
-        <div className="mt-8 sm:mt-10 md:mt-12 grid gap-6 sm:gap-7 md:grid-cols-3">
+        <div className="mt-8 sm:mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7">
           <AdvocateCard advocate={advocates[0]} index={0} className="order-1 md:order-1" />
           <AdvocateCard advocate={advocates[1]} index={1} className="order-2 md:order-2" />
           <AdvocateCard advocate={advocates[2]} index={2} className="order-3 md:order-3" />
+          <AdvocateCard advocate={advocates[3]} index={3} className="order-4 md:order-4" />
         </div>
 
         <div className="mt-8 sm:mt-10 md:mt-12">
