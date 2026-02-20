@@ -11,7 +11,7 @@ import FAQSection from '@/components/FAQSection'
 import Footer from '@/components/Footer'
 import HashScrollHandler from '@/components/HashScrollHandler'
 import Script from 'next/script'
-
+//edit
 const TestimonialsSection = dynamic(() => import('@/components/TestimonialsSection'), {
   ssr: false,
   loading: () => <div className="h-[460px] bg-[#F7F5F4]" />
